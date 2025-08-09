@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on Stephan Bridger&#39;s Lab Notebook</title>
+    <link>//localhost:1313/</link>
+    <description>Recent content in Home on Stephan Bridger&#39;s Lab Notebook</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 07 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Internet Service Providers</title>
+      <link>//localhost:1313/post/2025/08/07/internet-service-providers/</link>
+      <pubDate>Thu, 07 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/post/2025/08/07/internet-service-providers/</guid>
+      <description>&lt;p&gt;Today I learned that some of the laws claiming to protect “free markets” in the internet provider industry are actually the reason I’m paying twice as much for worse service—and why I can’t switch.&lt;/p&gt;&#xA;&lt;p&gt;In some locations, laws give a single Internet Service Provider an exclusive territory, blocking competitors entirely. As a counter-example, at my previous home&amp;rsquo;s address, various internet providers were allowed to service the area. Therefore, potential customers get to engage with a free market and pick the service that works best for them. At that particular location, it&amp;rsquo;s possible to get fiber optic internet service (500 Mbps) at just $45 per month. This outcome is only possible due to various companies being able to compete with one another.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hello World</title>
+      <link>//localhost:1313/post/2025/08/02/hello-world/</link>
+      <pubDate>Sat, 02 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/post/2025/08/02/hello-world/</guid>
+      <description>&lt;p&gt;At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas&#xA;molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et&#xA;dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil&#xA;impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et&#xA;aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum&#xA;hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>//localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/about/</guid>
+      <description>&lt;p&gt;Once upon a time, I worked as a musician. But lately I’ve been building and taking apart other contraptions. I’m reorganizing my notes and configuring this new site. Consider it a lab notebook in progress. Previously, I’ve written elsewhere on the internet: GitHub, Blogspot, Tumblr, and Substack. But from now on, I’ll be posting here at lab.hexagr.am.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m interested in quantitative things like physics, math, and engineering. But I am also fascinated by the less tangible aspects of nature, like our lived experience, meaning-making processes, and social rituals. So, I find myself thinking about brains, language, and economics a lot, too.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

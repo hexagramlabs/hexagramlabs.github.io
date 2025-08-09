@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello World | Stephan Bridger&#39;s Lab Notebook</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about/">About</a></li>
+      
+      <li><a href="/tags/">Tags</a></li>
+      
+      <li><a href="/index.xml">Subscribe</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Hello World</span></h1>
+
+<h2 class="date">2025/08/02</h2>
+</div>
+
+<main>
+<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas
+molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et
+dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil
+impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et
+aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum
+hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+<blockquote>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></blockquote>
+<p>$$
+a_{0} + a_{0}a_{1} + a_{0}a_{1}a_{2} + \cdots + a_{0}a_{1}a_{2} \cdots a_{n} = \cfrac{a_{0}}{1 - \cfrac{a_{1}}{1 + a_{1} - \cfrac{a_{2}}{1 + a_{2} - \cfrac{\ddots}{\ddots \cfrac{a_{n-1}}{1 + a_{n-1} - \cfrac{a_{n}}{1 + a_{n}}}}}}}
+$$</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lisp" data-lang="lisp"><span style="display:flex;"><span>(<span style="color:#999">defun</span> <span style="color:#008080">cont-frac</span> (<span style="color:#008080">n</span> <span style="color:#008080">d</span> <span style="color:#008080">k</span>)
+</span></span><span style="display:flex;"><span>  (<span style="font-weight:bold">labels</span> ((<span style="color:#008080">iter</span> (<span style="color:#008080">i</span> <span style="color:#008080">result</span>)
+</span></span><span style="display:flex;"><span>             (<span style="font-weight:bold">if</span> (<span style="color:#900;font-weight:bold">=</span> <span style="color:#008080">i</span> <span style="color:#099">0</span>)
+</span></span><span style="display:flex;"><span>                 <span style="color:#008080">result</span>
+</span></span><span style="display:flex;"><span>                 (<span style="color:#008080">iter</span> (<span style="color:#900;font-weight:bold">-</span> <span style="color:#008080">i</span> <span style="color:#099">1</span>) (<span style="color:#900;font-weight:bold">/</span> (<span style="color:#900;font-weight:bold">funcall</span> <span style="color:#008080">n</span> <span style="color:#008080">i</span>) (<span style="color:#900;font-weight:bold">+</span> (<span style="color:#900;font-weight:bold">funcall</span> <span style="color:#008080">d</span> <span style="color:#008080">i</span>) <span style="color:#008080">result</span>))))))
+</span></span><span style="display:flex;"><span>    (<span style="color:#008080">iter</span> <span style="color:#008080">k</span> <span style="color:#099">0</span>)))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>(<span style="color:#900;font-weight:bold">format</span> <span style="color:#008080">t</span> <span style="color:#b84">&#34;~a&#34;</span> (<span style="color:#008080">cont-frac</span> (<span style="color:#999">lambda</span> (<span style="color:#008080">i</span>) <span style="color:#099">1.0</span>) (<span style="color:#999">lambda</span> (<span style="color:#008080">i</span>) <span style="color:#099">1.0</span>) <span style="color:#099">10</span>))
+</span></span></code></pre></div><p>What if we also wanted some in-line code? Well, that is possible too, by using single backticks. Consider the above lisp magic. We can explain how it works and use backticks to highlight its parts.</p>
+<p>This Lisp code defines a function <code>cont-frac</code>, which computes a continued fraction. The function uses the helper <code>iter</code>, defined inside <code>cont-frac</code> using <code>labels</code> for local recursion to iterate and calculate the fraction.</p>
+<p>We write a <code>lambda</code> function to handle the numerator and denominator values, which are then passed back as functions rather than values. The <code>iter</code> function is where the magic happens. It keeps calling itself with a reduced iteration count <code>(i - 1)</code>, counting down until <code>i</code> has reached <code>0</code>. And at each step, it computes a fraction.</p>
+<p>The program terminates and outputs our final value when the lamdba&rsquo;s index hits <code>0</code>. Basically the Lisp interpreter is being told, &ldquo;hey, simulate 10 iterations of <code>1 / (1 + 1 / (1 + 1 /...))</code>&rdquo; by the lambda function.</p>
+<figure class="centered-image">
+    <a href="/images/alice.jpg" class="glightbox" >
+      <img 
+        src="/images/alice.jpg" 
+        alt="Image"
+        width=""
+        height=""
+        style="max-width: 80%; height: auto;"
+      >
+    </a>
+</figure>
+
+
+</main>
+
+  <footer>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<script src="https://cdn.jsdelivr.net/npm/@xiee/utils/js/math-code.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/@xiee/utils/js/render-katex.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/@xiee/utils/js/center-img.min.js" defer></script>
+
+
+
+
+  
+  <hr/>
+  © <a href="https://lab.hexagr.am">Stephan Bridger</a> 2025 &ndash; 2025 | <a href="https://github.com/hexagr">GitHub</a> | <a href="https://x.com/hexagr">X</a>
+  
+  </footer>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+
+
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    GLightbox({ selector: '.glightbox' });
+  });
+</script>
+
+
+<script src="https://unpkg.com/tex-linebreak@0.8.1/dist/lib.js" defer></script>
+<script src="https://unpkg.com/tex-linebreak@0.8.1/dist/hyphens_en-us.js" defer></script>
+<script>
+(function () {
+  const libScript = document.createElement('script');
+  libScript.src = 'https://unpkg.com/tex-linebreak@0.8.1/dist/lib.js';
+  document.body.appendChild(libScript);
+
+  const dictScript = document.createElement('script');
+  dictScript.src = 'https://unpkg.com/tex-linebreak@0.8.1/dist/hyphens_en-us.js';
+  document.body.appendChild(dictScript);
+
+  const libLoaded = new Promise(resolve => libScript.onload = resolve);
+  const dictLoaded = new Promise(resolve => dictScript.onload = resolve);
+
+  Promise.all([libLoaded, dictLoaded]).then(() => {
+    const lib = window.texLineBreak_lib;
+    const dict = window["texLineBreak_hyphens_en-us"];
+    const hyphenator = lib.createHyphenator(dict);
+
+    function justifyAll() {
+      const paras = Array.from(document.querySelectorAll('p'));
+      lib.justifyContent(paras, hyphenator);
+    }
+
+    
+    window.addEventListener('load', () => {
+      justifyAll(); 
+
+      
+      if (window.innerWidth > 768) {
+        let resizeTimeout;
+        window.addEventListener('resize', () => {
+          clearTimeout(resizeTimeout);
+          resizeTimeout = setTimeout(justifyAll, 150);
+        });
+      }
+    });
+  }).catch(err => console.error("TeX linebreak failed:", err));
+})();
+</script>
+
+
+
+
+
+  </body>
+</html>
+

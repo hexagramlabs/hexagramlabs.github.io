@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About | Stephan Bridger&#39;s Lab Notebook</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about/">About</a></li>
+      
+      <li><a href="/tags/">Tags</a></li>
+      
+      <li><a href="/index.xml">Subscribe</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">About</span></h1>
+
+
+</div>
+
+<main>
+<p>Once upon a time, I worked as a musician. But lately I’ve been building and taking apart other contraptions. I’m reorganizing my notes and configuring this new site. Consider it a lab notebook in progress. Previously, I’ve written elsewhere on the internet: GitHub, Blogspot, Tumblr, and Substack. But from now on, I’ll be posting here at lab.hexagr.am.</p>
+<p>I&rsquo;m interested in quantitative things like physics, math, and engineering. But I am also fascinated by the less tangible aspects of nature, like our lived experience, meaning-making processes, and social rituals. So, I find myself thinking about brains, language, and economics a lot, too.</p>
+
+</main>
+
+  <footer>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<script src="https://cdn.jsdelivr.net/npm/@xiee/utils/js/math-code.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/@xiee/utils/js/render-katex.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/@xiee/utils/js/center-img.min.js" defer></script>
+
+
+
+
+  
+  <hr/>
+  © <a href="https://lab.hexagr.am">Stephan Bridger</a> 2025 &ndash; 2025 | <a href="https://github.com/hexagr">GitHub</a> | <a href="https://x.com/hexagr">X</a>
+  
+  </footer>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+
+
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    GLightbox({ selector: '.glightbox' });
+  });
+</script>
+
+
+<script src="https://unpkg.com/tex-linebreak@0.8.1/dist/lib.js" defer></script>
+<script src="https://unpkg.com/tex-linebreak@0.8.1/dist/hyphens_en-us.js" defer></script>
+<script>
+(function () {
+  const libScript = document.createElement('script');
+  libScript.src = 'https://unpkg.com/tex-linebreak@0.8.1/dist/lib.js';
+  document.body.appendChild(libScript);
+
+  const dictScript = document.createElement('script');
+  dictScript.src = 'https://unpkg.com/tex-linebreak@0.8.1/dist/hyphens_en-us.js';
+  document.body.appendChild(dictScript);
+
+  const libLoaded = new Promise(resolve => libScript.onload = resolve);
+  const dictLoaded = new Promise(resolve => dictScript.onload = resolve);
+
+  Promise.all([libLoaded, dictLoaded]).then(() => {
+    const lib = window.texLineBreak_lib;
+    const dict = window["texLineBreak_hyphens_en-us"];
+    const hyphenator = lib.createHyphenator(dict);
+
+    function justifyAll() {
+      const paras = Array.from(document.querySelectorAll('p'));
+      lib.justifyContent(paras, hyphenator);
+    }
+
+    
+    window.addEventListener('load', () => {
+      justifyAll(); 
+
+      
+      if (window.innerWidth > 768) {
+        let resizeTimeout;
+        window.addEventListener('resize', () => {
+          clearTimeout(resizeTimeout);
+          resizeTimeout = setTimeout(justifyAll, 150);
+        });
+      }
+    });
+  }).catch(err => console.error("TeX linebreak failed:", err));
+})();
+</script>
+
+
+
+
+
+  </body>
+</html>
+
