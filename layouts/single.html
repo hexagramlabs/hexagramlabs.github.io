@@ -1,0 +1,49 @@
+{{ partial "header.html" . }}
+<div class="article-meta">
+<h1><span class="title">{{ .Title | markdownify }}</span></h1>
+{{ with .Params.author }}<h2 class="author">{{ . }}</h2>{{ end }}
+{{ if (gt .Params.date 0) }}<h2 class="date">{{ .Date.Format "2006/01/02" }}</h2>{{ end }}
+</div>
+<main>
+{{ .Content }}
+</main>
+
+{{ partial "footer.html" . }}
+
+<div id="disqus_thread" class="disqus-thread"></div>
+
+<script>
+  // Function to load the Disqus script when the user scrolls to the comment section
+  function loadDisqus() {
+    var disqusThread = document.getElementById('disqus_thread');
+    
+    if (disqusThread) {
+      var disqusScript = document.createElement('script');
+      disqusScript.src = 'https://hexagr.disqus.com/embed.js';
+      disqusScript.setAttribute('data-timestamp', +new Date());
+      disqusThread.appendChild(disqusScript);
+    }
+  }
+
+  // Use IntersectionObserver to detect when the comment section comes into view
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          loadDisqus();
+          observer.disconnect();  // Stop observing after the Disqus script is loaded
+        }
+      });
+    }, { threshold: 0.5 }); // Trigger when 50% of the comment section is in view
+
+    observer.observe(document.getElementById('disqus_thread'));
+  } else {
+    // Fallback for browsers that don't support IntersectionObserver
+    window.addEventListener('scroll', function() {
+      if (document.getElementById('disqus_thread').getBoundingClientRect().top < window.innerHeight) {
+        loadDisqus();
+      }
+    });
+  }
+</script>
+
