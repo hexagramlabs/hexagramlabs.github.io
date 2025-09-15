@@ -1,0 +1,243 @@
+body {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1em;
+  line-height: 1.5;
+}
+
+a {
+  color: #00856F
+}
+
+/* header and footer areas */
+.menu {
+  padding: 0;
+}
+
+.menu li {
+  display: inline-block;
+}
+
+.article-meta,
+.menu a {
+  text-decoration: none;
+  background: #eee;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.menu,
+.article-meta,
+footer {
+  text-align: center;
+}
+
+.title {
+  font-size: 1.1em;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+hr {
+  border-style: dashed;
+  color: #ddd;
+}
+
+/* code */
+pre {
+  border: 1px solid #ddd;
+  box-shadow: 5px 5px 5px #eee;
+  padding: 1em;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  
+}
+
+code {
+  background: #f9f9f9;
+
+}
+
+pre code {
+  background: none;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+
+/* misc elements */
+img,
+iframe,
+video {
+  max-width: 100%;
+}
+
+main {
+  hyphens: auto;
+}
+
+/* Only style normal blockquotes */
+blockquote:not(.katex-display) {
+  background: #f9f9f9;
+  border-left: 5px solid #00856F;
+  padding: 3px 1em 3px;
+
+  max-width: 42em;
+  margin: 1.5em auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+table {
+  margin: auto;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+}
+
+table thead th {
+  border-bottom: 1px solid #ddd;
+}
+
+th,
+td {
+  padding: 5px;
+}
+
+thead,
+tfoot,
+tr:nth-child(even) {
+  background: #eee;
+}
+
+.centered-image {
+  text-align: center;
+  display: block;
+  margin: 1em auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.centered-image img {
+  display: inline-block;
+}
+
+img.in-text {
+  display: block;
+  margin: 1.5em auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.katex-display {
+  min-height: 1.5em;
+  -webkit-overflow-scrolling: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+  padding: 1em 0;
+  scrollbar-width: thin;
+}
+
+
+body.dark-mode {
+  background-color: #121212;
+  color: #eaeaea;
+}
+
+body.dark-mode a {
+  color: #32beff;
+}
+
+body.dark-mode .menu a {
+  background-color: #444;
+
+}
+
+body.dark-mode .article-meta,
+body.dark-mode .title {
+  background-color: #333;
+  color: #eaeaea;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+body.dark-mode pre {
+  border: 1px solid #444;
+  box-shadow: 5px 5px 10px #000;
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .pre code {
+  background: none;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body.dark-mode code {
+  background: #333;
+}
+
+body.dark-mode blockquote:not(.katex-display) {
+  background: #333;
+  border-left: 5px solid #32beff;
+  color: #eaeaea;
+}
+
+.footnotes {
+  width: 100%;
+  font-size: 90%;
+}
+
+.footnotes ol {
+  margin-left: 1px;
+  margin-right: 15px;
+}
+
+.footnotes p {
+  margin-right: 15px;
+  margin-left: 1px;
+}
+
+.upvote-section {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centers the button and count horizontally */
+  margin-top: 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 13px;
+  color: #828282;
+}
+
+.upvote-button {
+  display: inline-block;
+  cursor: pointer;
+  user-select: none;
+  padding: 2px;
+}
+
+.upvote-button:hover .upvote-arrow {
+  color: #ff6600; /* Hacker News orange on hover */
+}
+
+.upvote-arrow {
+  font-size: 10px;
+  line-height: 1;
+  color: #828282; /* Gray color similar to Hacker News */
+}
+
+.upvote-count {
+  margin-left: 4px;
+  color: #828282;
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+	<meta name="generator" content="Hugo 0.149.0"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home | Stephan Bridger&#39;s Lab Notebook</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="stylesheet" href="/css/highlight-light.css" />
+    
+
+    <head><meta name="description" content="Stephan Bridger&#39;s Lab Notebook" />
+</head>
+
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about/">About</a></li>
+      
+      <li><a href="/tags/">Tags</a></li>
+      
+      <li><a href="/index.xml">Subscribe</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+
+
+
+
+
+
+
+
+
+<ul>
+  
+  <li>
+    <span class="date">2025/08/02</span>
+    <a href="/post/2025/08/02/hello-world/">Hello World</a>
+  </li>
+  
+</ul>
+
+
+
+  <footer>
+  
+<link rel="stylesheet" href="/css/katex.min.css">
+<script src="/js/math-code.min.js" defer></script>
+<script src="/js/katex.min.js" defer></script>
+<script src="/js/auto-render.min.js" defer></script>
+<script src="/js/render-katex.js" defer></script>
+<script src="/js/center-img.min.js" defer></script>
+
+
+
+
+  
+  <hr/>
+  © <a href="https://lab.hexagr.am">Stephan Bridger</a> 2025 &ndash; 2025 | <a href="https://github.com/hexagr">GitHub</a> | <a href="https://x.com/hexagr">X</a>
+  
+  </footer>
+
+<script src="/js/upvote.js"></script>
+
+
+<link rel="stylesheet" href="/css/glightbox.min.css">
+
+
+<script src="/js/glightbox.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    GLightbox({ selector: '.glightbox' });
+  });
+</script>
+
+
+
+<script src="/js/lib.js" defer></script> 
+<script src="/js/hyphens_en-us.js" defer></script>
+<script>
+(function () {
+  const libScript = document.createElement('script');
+  libScript.src = '/js/lib.js';
+  document.body.appendChild(libScript);
+  
+  const dictScript = document.createElement('script');
+  dictScript.src = '/js/hyphens_en-us.js';
+  document.body.appendChild(dictScript);
+
+  const libLoaded = new Promise(resolve => libScript.onload = resolve);
+  const dictLoaded = new Promise(resolve => dictScript.onload = resolve);
+
+ Promise.all([libLoaded, dictLoaded]).then(() => {
+    const lib = window.texLineBreak_lib;
+    const dict = window["texLineBreak_hyphens_en-us"];
+    const hyphenator = lib.createHyphenator(dict);
+
+    function justifyAll() {
+      const paras = Array.from(document.querySelectorAll('p'));
+      lib.justifyContent(paras, hyphenator);
+    }
+
+    
+    window.addEventListener('load', () => {
+      justifyAll(); 
+
+      
+      if (window.innerWidth > 768) {
+        let resizeTimeout;
+        window.addEventListener('resize', () => {
+          clearTimeout(resizeTimeout);
+          resizeTimeout = setTimeout(justifyAll, 150);
+        });
+      }
+    });
+  }).catch(err => console.error("TeX linebreak failed:", err));
+})();
+</script>
+
+
+</body>
+</html>
+
+

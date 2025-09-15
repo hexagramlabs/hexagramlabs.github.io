@@ -1,0 +1,68 @@
+home = 'https://lab.hexagr.am'
+baseURL = 'https://lab.hexagr.am'
+languageCode = 'en-us'
+title = "Stephan Bridger's Lab Notebook"
+theme = 'xmin'
+footnotereturnlinkcontents = "↩"
+disqusShortname = 'hexagr'
+
+[pagination]
+    pagerSize = 20
+
+
+[menu]
+
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    name = "About"
+    url = "about/"
+    weight = 2
+
+  [[menu.main]]
+    name = "Tags"
+    url = "tags/"
+    weight = 3
+
+  [[menu.main]]
+    name = "Subscribe"
+    url = "index.xml"
+    weight = 4
+
+
+[permalinks]
+note = "/note/:year/:month/:day/:slug/"
+posts = "/post/:year/:month/:day/:slug/"
+
+
+[params]
+  footer = "&copy; [Stephan Bridger](https://lab.hexagr.am) 2025 -- {Year} | [GitHub](https://github.com/hexagr) | [X](https://x.com/hexagr)"
+  description = "Stephan Bridger's Lab Notebook"
+ 
+[markup]
+
+  [markup.highlight]
+    codeFences = true
+    style = "trac"
+    noClasses = false
+
+  [markup.goldmark]
+
+    [markup.goldmark.renderer]
+      unsafe = true
+
+    [markup.goldmark.extensions.passthrough]
+      enable = true
+
+      blockDelimiters = [
+        ["\\[", "\\]"],
+        ["$$", "$$"]
+      ]
+
+      inlineDelimiters = [
+        ["\\(", "\\)"]
+      ]
+
