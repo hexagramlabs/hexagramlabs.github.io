@@ -1,0 +1,36 @@
+  <!-- Placeholder for Disqus -->
+  <div id="disqus_thread"></div>
+
+<script>
+  // Intersection Observer to lazy-load Disqus when it's in view
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      // Check if the target is in view
+      if (entry.isIntersecting) {
+        console.log("Initializing Disqus!");
+
+        // Prevent Disqus from initializing multiple times
+        observer.unobserve(entry.target);
+
+        // Set up Disqus configuration
+        var disqus_config = function () {
+            this.page.url = "{{ .Permalink }}"; // Dynamically set the page URL in Hugo
+            this.page.identifier = "{{ .File.BaseFileName }}"; 
+        };
+
+        // Load Disqus Embed Script
+        (function() {
+          var d = document, s = d.createElement('script');
+          s.src = 'https://hexagr.disqus.com/embed.js'; // Replace EXAMPLE with your Disqus shortname
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      }
+    });
+  }, { threshold: 0.5 }); // You can adjust the threshold to control when the observer fires (e.g., 50% of the element is in view)
+
+  // Start observing the Disqus container (make sure the ID matches your HTML element)
+  const mountNode = document.querySelector("#disqus_thread");
+  observer.observe(mountNode);
+</script>
+
