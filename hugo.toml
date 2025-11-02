@@ -1,0 +1,64 @@
+home = 'https://lab.hexagr.am'
+baseURL = 'https://lab.hexagr.am'
+languageCode = 'en-us'
+title = "Stephan Bridger's Field Notes"
+theme = 'xmin'
+footnotereturnlinkcontents = "↩"
+disqusShortname = 'hexagr'
+
+[caches.getresource]
+dir = ':resourceDir/_gen'
+maxAge = -1
+
+[pagination]
+    pagerSize = 20
+
+
+[menu]
+
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    name = "About"
+    url = "about/"
+    weight = 2
+
+  [[menu.main]]
+    name = "Tags"
+    url = "tags/"
+    weight = 3
+
+  [[menu.main]]
+    name = "Subscribe"
+    url = "index.xml"
+    weight = 4
+
+
+[permalinks]
+note = "/note/:year/:month/:day/:slug/"
+posts = "/post/:year/:month/:day/:slug/"
+
+
+[params]
+  footer = "&copy; [Stephan Bridger](https://lab.hexagr.am) 2025 -- {Year} | [GitHub](https://github.com/hexagr) | [X](https://x.com/hexagr)"
+  description = "Stephan Bridger's Field Notes"
+ 
+[markup]
+
+  [markup.highlight]
+    codeFences = true
+    style = "trac"
+    noClasses = false
+
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [ ['\[', '\]'], ['$$', '$$'] ]
+          inline = [ ['\(', '\)'] ]
+  
+    math = true  # Enables site-wide math rendering (optional for SSR, but recommended)

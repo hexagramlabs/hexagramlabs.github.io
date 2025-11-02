@@ -1,0 +1,38 @@
+{{ partial "header.html" . }}
+
+<main id="main-content" role="main">
+
+{{ if not .IsHome }}
+<h1>{{ .Title | markdownify }}</h1>
+{{ end }}
+
+{{ .Content }}
+
+{{/* Determine correct page set for pagination */}}
+{{ $pages := cond .IsHome (where .Site.RegularPages "Section" "posts") (where .Pages "Section" "!=" "") }}
+{{ $paginator := .Paginate $pages }}
+
+<ul>
+  {{ range $paginator.Pages }}
+  <li>
+    <span class="date">{{ .Date.Format "2006/01/02" }}</span>
+    <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
+  </li>
+  {{ end }}
+</ul>
+
+{{ if gt $paginator.TotalPages 1 }}
+<nav>
+  {{ if $paginator.HasPrev }}
+    <a href="{{ $paginator.Prev.URL }}">Previous</a>
+  {{ end }}
+  Page {{ $paginator.PageNumber }} of {{ $paginator.TotalPages }}
+  {{ if $paginator.HasNext }}
+    <a href="{{ $paginator.Next.URL }}">Next</a>
+  {{ end }}
+</nav>
+{{ end }}
+
+</main>
+
+{{ partial "footer.html" . }}

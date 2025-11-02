@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Locus Obscurus | Stephan Bridger&#39;s Field Notes</title>
+
+<link rel="stylesheet" href="/css/style.css" />
+
+
+<link rel="preload" as="style" href="/css/fonts.css">
+<link rel="stylesheet" href="/css/fonts.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="/css/fonts.css"></noscript>
+
+
+<script>
+  window.addEventListener('load', function () {
+    ["\/css\/highlight-light.css", "\/css\/katex.min.css"].forEach(href => {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = href;
+      document.head.appendChild(link);
+    });
+  });
+</script>
+
+    <head>
+
+
+
+
+<html class="no-js" lang="en">
+<script>
+  document.documentElement.classList.replace('no-js', 'js');
+</script>
+
+
+<script>
+  document.documentElement.classList.add('js');
+</script><meta name="description" content="William Kingdon Clifford, cross-ratios, and Pascal" />
+</head>
+
+
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about/">About</a></li>
+      
+      <li><a href="/tags/">Tags</a></li>
+      
+      <li><a href="/index.xml">Subscribe</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+
+<div class="article-meta">
+<h1><span class="title">Locus Obscurus</span></h1>
+
+<h2 class="date">2025/10/19</h2>
+</div>
+<main>
+<p>From the simple pinhole camera to our own eyes, it is a reoccurring theme to model three dimensional space and compress information. In some ways, this is the essence of both vision and computing. To achieve that end, however, an eye or lens must reflect whatever it sees from the physical realm, into a two-dimensional space.</p>
+<p>This is also true with a &ldquo;lens-less,&rdquo; pinhole camera, which projects a map of coordinates from the 3-dimensional world, into 2-dimensional form. Understanding projective geometry is useful here.</p>
+<p>Every frame observed in reality is a function that outputs the information necessary to describe or map that frame. If I take a photograph of a desk, I have made record the dimensions of that desk, the colors, textures, boundaries, shadows, vanishing point, and so on. Much of that information can be translated into an image. We can model this mathematically.</p>
+<p>Let an <em>ideal pinhole camera</em> be represented with the following matrix.</p>
+
+
+<span class="math math-block" id="h-sc-math-0" style="display: flex; justify-content: center; align-items: center; margin: 1em 0;">
+  <img src="/_4691492915100796562.svg" alt="mathematical expression or equation">
+</span>
+<p>Where:</p>
+<p>° The <em>lowercase</em> x,y coordinates are the <em>2-dimensional</em> image projection point.</p>
+<p>° The <em>uppercase</em> XYZ coordinates are a point from <em>3-dimensional world-space</em>.</p>
+<p>° 
+
+<span class="math math-inline" id="h-sc-math-1">
+  <img src="/_6077355526206698987.svg" alt="mathematical expression or equation">
+</span> are the the focal lengths along the x and y-axis, measured in pixels via a scaling factor</p>
+<p>° 
+
+<span class="math math-inline" id="h-sc-math-2">
+  <img src="/_1510734032713680081.svg" alt="mathematical expression or equation">
+</span> is a skew factor, accounting for non-orthogonal tilt between axes</p>
+<p>° 
+
+<span class="math math-inline" id="h-sc-math-3">
+  <img src="/_2580958147905930291.svg" alt="mathematical expression or equation">
+</span>
+are principle point offsets, usually in the center where the optical axis pierces the 2D plane; this implies a translation of the original coordinates</p>
+<p>° 
+
+<span class="math math-inline" id="h-sc-math-4">
+  <img src="/_2766795771486231587.svg" alt="mathematical expression or equation">
+</span> is a scale factor</p>
+<p>The focal length, principal point, skew parameter, and pinhole size can all be thought of as <strong>intrinsic</strong> factors. They are unchanging factors that are reusable from one scene to another.</p>
+<p>However, there is also an <strong>extrinsic</strong>  matrix&ndash;the parameters that map 3-dimensional world-space to 2-dimensional world-space. This parameter set changes when the camera position changes. The R and t parameters represent the homogenous matrix transformation and change from the world coordinate system to the camera&rsquo;s coordinate system.</p>
+<p>The 
+
+<span class="math math-inline" id="h-sc-math-5">
+  <img src="/_6265954370747958319.svg" alt="mathematical expression or equation">
+</span> matrix performs a rotation translation, the matrix product of a projective and homogenous transformation.</p>
+
+
+<span class="math math-block" id="h-sc-math-6" style="display: flex; justify-content: center; align-items: center; margin: 1em 0;">
+  <img src="/_4992031093753871403.svg" alt="mathematical expression or equation">
+</span>
+<p>If we expand our R and t matrix, we may write it out completely with the rest of our pinboard camera model, yielding something like:</p>
+
+
+<span class="math math-block" id="h-sc-math-7" style="display: flex; justify-content: center; align-items: center; margin: 1em 0;">
+  <img src="/_8634569260729717685.svg" alt="mathematical expression or equation">
+</span>
+<p>The extrinsic parameters encode the homogeneous transformation&ndash;the basis of converting the 3-dimensional world coordinate system to a 2-dimensional one.</p>
+
+
+
+
+  <div class="upvote-section">
+    <span class="upvote-button" data-post-id="http://localhost:1313/post/2025/10/19/locus-obscurus/">
+      <span class="upvote-arrow">▲</span>
+    </span>
+    <span class="upvote-count">JavaScript is required to view toasts.</span>
+  </div>
+
+
+</main>
+
+  <footer>
+  <script src="/js/math-code.min.js" defer></script>
+<script src="/js/auto-render.min.js" defer></script>
+<script src="/js/center-img.min.js" defer></script>
+<script src="/js/tex-linebreak.js"></script>
+
+
+  
+  <hr/>
+  © <a href="https://lab.hexagr.am">Stephan Bridger</a> 2025 &ndash; 2025 | <a href="https://github.com/hexagr">GitHub</a> | <a href="https://x.com/hexagr">X</a>
+  
+  </footer>
+
+<script src="/js/upvote.js"></script>
+
+
+<link rel="stylesheet" href="/css/glightbox.min.css">
+
+
+<script src="/js/glightbox.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    GLightbox({ selector: '.glightbox' });
+  });
+</script>
+
+
+</body>
+</html>
+
+
+
