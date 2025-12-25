@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "hyphenation.en-us": "^0.2.1",
+    "katex": "^0.16.23",
+    "tex-linebreak": "^0.8.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.10"
+  }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
+<!-- Load main styles immediately -->
+<link rel="stylesheet" href="{{ "css/style.css" | relURL }}" />
+
+<!-- Async load fonts -->
+<link rel="preload" as="style" href="{{ "css/fonts.css" | relURL }}">
+<link rel="stylesheet" href="{{ "css/fonts.css" | relURL }}" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="{{ "css/fonts.css" | relURL }}"></noscript>
+
+<!-- Defer highlight.js and KaTeX styles -->
+<script>
+  window.addEventListener('load', function () {
+    ["{{ "css/highlight-light.css" | relURL }}", "{{ "css/katex.min.css" | relURL }}"].forEach(href => {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = href;
+      document.head.appendChild(link);
+    });
+  });
+</script>
+
+    {{ partial "head_custom.html" . }}
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      {{ range .Site.Menus.main }}
+      <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+      {{ end }}
+    </ul>
+    <hr/>
+    </nav>
+

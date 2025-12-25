@@ -1,0 +1,298 @@
+@media (prefers-color-scheme: dark) {
+
+body { background: white; }
+
+  html, img, video, iframe {
+    filter: invert(100%) hue-rotate(160deg);
+  }
+
+
+  /* math stays white */
+  .math img {
+    filter: invert(1) !important;
+    mix-blend-mode: difference !important;
+
+  }
+
+
+  .highlight {
+    background: rgb(240, 240, 240) !important;
+  }
+
+}
+
+
+
+
+.no-js p,
+.no-js li,
+.no-js blockquote {
+  text-align: justify;
+  hyphens: auto;
+  overflow-wrap: break-word;
+  text-wrap: pretty;
+  orphans: auto;
+  widows: auto;
+  font-kerning: normal;
+  font-feature-settings: "kern", "liga", "onum", "pnum", "calt", "clig";
+  text-rendering: optimizeLegibility;
+  word-spacing: -0.011em;
+  letter-spacing: -0.033em;
+}
+
+
+
+
+.math-inline {
+  display: inline-block !important;
+  white-space: nowrap !important; 
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+
+.math-inline img, .math-inline img {
+  display: block;
+  vertical-align: baseline;
+  margin-bottom: -1.358px;
+}
+
+
+
+
+.math-block img {
+  width: 100%;
+}
+
+
+
+@supports (hyphenate-limit-chars: 5) {
+  .no-js p,
+  .no-js li,
+  .no-js blockquote {
+    hyphenate-limit-chars: 5; /* Avoid breaking short words; adjust to 10 for conservatism */
+  }
+}
+
+body {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1em;
+  line-height: 1.5;
+  overflow-x: hidden;
+  color: #3b3b3b;
+}
+
+
+a {
+  color: #006909;
+}
+
+/* header and footer areas */
+.menu {
+  padding: 0;
+}
+
+.menu li {
+  display: inline-block;
+}
+
+.article-meta,
+.menu a {
+  text-decoration: none;
+  background: #eee;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.menu,
+.article-meta,
+footer {
+  text-align: center;
+}
+
+.title {
+  font-size: 1.1em;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+hr {
+  border-style: dashed;
+  color: #ddd;
+}
+
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 5px solid #006909;
+  padding: 1px 1em 1px;
+  overflow-wrap: break-word;
+  margin: 1em auto;
+  width: 100%;
+  box-sizing: border-box;
+  hyphens: auto;
+  overflow-wrap: break-word;
+  text-wrap: pretty;
+  orphans: 2;
+  widows: 2;
+  text-align: justify;
+  font-kerning: normal;
+  font-feature-settings: "kern", "liga", "onum", "pnum", "calt", "clig";
+  text-rendering: optimizeLegibility;
+  word-spacing: -0.037em;
+  letter-spacing: -0.001em;
+}
+
+
+
+/* code */
+pre {
+  border: 1px solid #ddd;
+  box-shadow: 5px 5px 5px #eee;
+  padding: 1em;
+  overflow-x: auto;
+  scrollbar-width: thin;
+
+  
+}
+
+
+code {
+  background: none;
+  color: black;
+}
+
+pre code {
+  background: none;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+
+/* misc elements */
+img,
+iframe,
+video {
+  max-width: 100%;
+}
+
+
+table {
+  margin: auto;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+}
+
+table thead th {
+  border-bottom: 1px solid #ddd;
+}
+
+th,
+td {
+  padding: 5px;
+}
+
+thead,
+tfoot,
+tr:nth-child(even) {
+  background: #eee;
+}
+
+.centered-image {
+  text-align: center;
+  display: block;
+  margin: 1em auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.centered-image img {
+  display: inline-block;
+}
+
+img.in-text {
+  display: block;
+  margin: 1.5em auto;
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+.footnotes {
+  width: 100%;
+  font-size: 90%;
+}
+
+.footnotes ol {
+  margin-left: 1px;
+  margin-right: 15px;
+}
+
+.footnotes p {
+  margin-right: 15px;
+  margin-left: 1px;
+}
+
+.upvote-section {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centers the button and count horizontally */
+  margin-top: 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 13px;
+  color: #595959;
+}
+
+.upvote-button {
+  display: inline-block;
+  cursor: pointer;
+  user-select: none;
+  padding: 2px;
+}
+
+.upvote-button:hover .upvote-arrow {
+  color: #ff6600; /* Hacker News orange on hover */
+}
+
+.upvote-arrow {
+  font-size: 10px;
+  line-height: 1;
+  color: #595959; /* Gray color similar to Hacker News */
+}
+
+.upvote-count {
+  margin-left: 4px;
+  color: #595959;
+}
+
+
+
+
+  .ginner-container {
+    background: rgb(255,255,255,0.0) !important;
+  }
+
+
+  .gslider {
+    background: rgb(255,255,255,0.6) !important;
+  }
+ 
+  .goverlay {
+    background: rgb(255,255,255,0.0) !important;
+  }
+
+
+  .glightbox-open {
+    background: rgb(255,255,255,1) !important;
+  }
+
+   .glightbox-close  {
+    background: transparent !important;
+  }
+
+
+

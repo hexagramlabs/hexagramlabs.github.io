@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on Stephan Bridger&#39;s Field Notes</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content in Home on Stephan Bridger&#39;s Field Notes</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 02 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello World</title>
+      <link>http://localhost:1313/post/2025/08/02/hello-world/</link>
+      <pubDate>Sat, 02 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2025/08/02/hello-world/</guid>
+      <description>&lt;h1 id=&#34;heading-1&#34;&gt;Heading 1&lt;/h1&gt;&#xA;&lt;p&gt;Lorem ipsum dolor sit amet,&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; consectetur adipiscing elit. Pellentesque scelerisque venenatis suscipit. Donec elementum, quam sit amet dapibus semper, ante ligula ultrices nunc, et tempus arcu velit at sem. Nunc finibus, enim sed gravida sagittis, urna nulla mollis orci, sit amet viverra tortor metus eget mauris. Aliquam convallis, mi in pharetra condimentum, dolor arcu efficitur nisl, in sollicitudin odio diam nec quam. Integer non metus nec sem tristique hendrerit. Nunc diam elit, interdum non dolor nec, vulputate suscipit erat. Curabitur faucibus, justo vel sollicitudin tempor, leo metus ultrices massa, non dignissim neque nisi ac dui. Suspendisse dignissim, felis sit amet egestas semper, nisl arcu placerat nibh, a luctus tellus arcu ut orci. Ut arcu turpis, facilisis ut odio vitae, lobortis sollicitudin metus. Curabitur non fringilla nunc. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque dapibus nibh ante, fermentum lacinia odio ultrices dapibus. Mauris pretium tempus sapien, at laoreet velit tempor eu. Cras a odio laoreet, fermentum enim eget, tristique risus.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;p&gt;Once upon a time, I worked as a musician. But lately I’ve been building and taking other things apart. I’m reorganizing my notes and configuring this new site. Previously, I’ve written elsewhere on the internet: GitHub, Blogspot, Tumblr, and Substack.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m interested in quantitative things like physics, math, and engineering. But I am also fascinated by the less tangible aspects of nature&amp;ndash;our lived experience, meaning-making processes, and social rituals. So, I find myself thinking about brains, language, and economics a lot, too.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

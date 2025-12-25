@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello World | Stephan Bridger&#39;s Field Notes</title>
+
+<link rel="stylesheet" href="/css/style.css" />
+
+
+<link rel="preload" as="style" href="/css/fonts.css">
+<link rel="stylesheet" href="/css/fonts.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="/css/fonts.css"></noscript>
+
+
+<script>
+  window.addEventListener('load', function () {
+    ["\/css\/highlight-light.css", "\/css\/katex.min.css"].forEach(href => {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = href;
+      document.head.appendChild(link);
+    });
+  });
+</script>
+
+    <head>
+
+
+
+
+<html class="no-js" lang="en">
+<script>
+  document.documentElement.classList.replace('no-js', 'js');
+</script>
+
+
+<script>
+  document.documentElement.classList.add('js');
+</script><meta name="description" content="A Hello World test metadescription" />
+</head>
+
+
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about/">About</a></li>
+      
+      <li><a href="/tags/">Tags</a></li>
+      
+      <li><a href="/index.xml">Subscribe</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+
+<div class="article-meta">
+<h1><span class="title">Hello World</span></h1>
+
+<h2 class="date">2025/08/02</h2>
+</div>
+<main>
+<h1 id="heading-1">Heading 1</h1>
+<p>Lorem ipsum dolor sit amet,<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> consectetur adipiscing elit. Pellentesque scelerisque venenatis suscipit. Donec elementum, quam sit amet dapibus semper, ante ligula ultrices nunc, et tempus arcu velit at sem. Nunc finibus, enim sed gravida sagittis, urna nulla mollis orci, sit amet viverra tortor metus eget mauris. Aliquam convallis, mi in pharetra condimentum, dolor arcu efficitur nisl, in sollicitudin odio diam nec quam. Integer non metus nec sem tristique hendrerit. Nunc diam elit, interdum non dolor nec, vulputate suscipit erat. Curabitur faucibus, justo vel sollicitudin tempor, leo metus ultrices massa, non dignissim neque nisi ac dui. Suspendisse dignissim, felis sit amet egestas semper, nisl arcu placerat nibh, a luctus tellus arcu ut orci. Ut arcu turpis, facilisis ut odio vitae, lobortis sollicitudin metus. Curabitur non fringilla nunc. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque dapibus nibh ante, fermentum lacinia odio ultrices dapibus. Mauris pretium tempus sapien, at laoreet velit tempor eu. Cras a odio laoreet, fermentum enim eget, tristique risus.</p>
+<blockquote>
+<p>Nullam auctor laoreet neque, vel efficitur nibh finibus id. Nunc ultricies, nisi et suscipit sagittis, elit urna pellentesque eros, quis vulputate nunc velit quis metus. Suspendisse iaculis pretium sem, in elementum massa consectetur vitae. Duis eu erat sit amet orci volutpat aliquet. Donec sodales scelerisque ultricies. Etiam a luctus ex. Quisque orci tortor, aliquet ut convallis at, lacinia in metus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis tincidunt, nisi eu tincidunt rutrum, dolor est maximus diam, eget malesuada metus nulla et ipsum. Aliquam nunc enim, tristique vitae lacinia in, vulputate et nisi.</p>
+</blockquote>
+<h2 id="heading-2">Heading 2</h2>
+<p>Here&rsquo;s some LaTeX:</p>
+
+
+<span class="math math-block" id="h-sc-math-0" style="display: flex; justify-content: center; align-items: center; margin: 1em 0;">
+  <img src="/_4935913235342912166.svg" alt="mathematical expression or equation">
+</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nb">defun</span> <span class="nv">cont-frac</span> <span class="p">(</span><span class="nv">n</span> <span class="nv">d</span> <span class="nv">k</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="k">labels</span> <span class="p">((</span><span class="nv">iter</span> <span class="p">(</span><span class="nv">i</span> <span class="nv">result</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">             <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="nf">=</span> <span class="nv">i</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                 <span class="nv">result</span>
+</span></span><span class="line"><span class="cl">                 <span class="p">(</span><span class="nv">iter</span> <span class="p">(</span><span class="nf">-</span> <span class="nv">i</span> <span class="mi">1</span><span class="p">)</span> <span class="p">(</span><span class="nf">/</span> <span class="p">(</span><span class="nf">funcall</span> <span class="nv">n</span> <span class="nv">i</span><span class="p">)</span> <span class="p">(</span><span class="nf">+</span> <span class="p">(</span><span class="nf">funcall</span> <span class="nv">d</span> <span class="nv">i</span><span class="p">)</span> <span class="nv">result</span><span class="p">))))))</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nv">iter</span> <span class="nv">k</span> <span class="mi">0</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nf">format</span> <span class="no">t</span> <span class="s">&#34;~a&#34;</span> <span class="p">(</span><span class="nv">cont-frac</span> <span class="p">(</span><span class="nb">lambda</span> <span class="p">(</span><span class="nv">i</span><span class="p">)</span> <span class="mf">1.0</span><span class="p">)</span> <span class="p">(</span><span class="nb">lambda</span> <span class="p">(</span><span class="nv">i</span><span class="p">)</span> <span class="mf">1.0</span><span class="p">)</span> <span class="mi">10</span><span class="p">))</span>
+</span></span></code></pre></div><h3 id="heading-3">Heading 3</h3>
+<p>What if we also wanted some in-line LateX? We could write an inline equation: 
+
+<span class="math math-inline" id="h-sc-math-1">
+  <img src="/_8167722874611469711.svg" alt="mathematical expression or equation">
+</span>. That&rsquo;s possible with $ delimiters. Or perhaps some inline code? Well, that is possible too, by using single backticks. Consider the above Lisp magic. We can explain how it works and use backticks to highlight its parts.</p>
+<p>This Lisp code defines a function <code>cont-frac</code>, which computes a continued fraction. The function uses the helper <code>iter</code>, defined inside <code>cont-frac</code> using <code>labels</code> for local recursion to iterate and calculate the fraction.</p>
+<p>We write a <code>lambda</code> function to handle the numerator and denominator values, which are then passed back as functions rather than values. The <code>iter</code> function is where the magic happens. It keeps calling itself with a reduced iteration count <code>(i - 1)</code>, counting down until <code>i</code> has reached <code>0</code>. And at each step, it computes a fraction.</p>
+<p>The program terminates and outputs our final value when the lamdba&rsquo;s index hits <code>0</code>. Basically the Lisp interpreter is being told, &ldquo;hey, simulate 10 iterations of <code>1 / (1 + 1 / (1 + 1 /...))</code>&rdquo; by the lambda function.</p>
+<figure class="centered-image">
+    <a href="/images/alice.webp" class="glightbox" >
+      <img 
+        src="/images/alice.webp" 
+        alt="Image"
+        width=""
+        height=""
+        style="max-width: 70%; height: auto;"
+      >
+    </a>
+</figure>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>This is the first footnote. You can put any Markdown content here, including <strong>bold</strong> or <em>italic</em> text.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>You better believe this is the second footnote, referencing something mildly
+relevant.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>And this is the third and final footnote, perhaps linking to <a href="https://example.com">an external
+resource</a>.&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+  <div class="upvote-section">
+    <span class="upvote-button" data-post-id="http://localhost:1313/post/2025/08/02/hello-world/">
+      <span class="upvote-arrow">▲</span>
+    </span>
+    <span class="upvote-count">JavaScript is required to view toasts.</span>
+  </div>
+
+
+</main>
+
+  <footer>
+  <script src="/js/math-code.min.js" defer></script>
+<script src="/js/auto-render.min.js" defer></script>
+<script src="/js/center-img.min.js" defer></script>
+<script src="/js/tex-linebreak.js"></script>
+
+
+  
+  <hr/>
+  © <a href="https://lab.hexagr.am">Stephan Bridger</a> 2025 &ndash; 2025 | <a href="https://github.com/hexagr">GitHub</a> | <a href="https://x.com/hexagr">X</a>
+  
+  </footer>
+
+<script src="/js/upvote.js"></script>
+
+
+<link rel="stylesheet" href="/css/glightbox.min.css">
+
+
+<script src="/js/glightbox.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    GLightbox({ selector: '.glightbox' });
+  });
+</script>
+
+
+</body>
+</html>
+
+
+

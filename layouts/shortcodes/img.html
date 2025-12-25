@@ -1,0 +1,27 @@
+{{- $src := .Get "url" -}}
+{{- $alt := .Get "alt" | default "Image" -}}
+{{- $width := .Get "width" -}}
+{{- $height := .Get "height" -}}
+{{- $class := .Get "class" | default "centered-image" -}}
+{{- $caption := .Get "caption" -}}
+{{- $scale := .Get "scale" | default "60" -}}
+{{- $lightbox := .Get "lightbox" | default "false" -}}
+
+<figure class="{{ $class }}">
+  {{- if eq $lightbox "true" }}
+    <a href="{{ $src }}" class="glightbox" {{ with $caption }}data-title="{{ . }}"{{ end }}>
+  {{- end }}
+      <img 
+        src="{{ $src }}" 
+        alt="{{ $alt }}"
+        width="{{ $width }}"
+        height="{{ $height }}"
+        style="max-width: {{ $scale }}%; height: auto;"
+      >
+  {{- if eq $lightbox "true" }}
+    </a>
+  {{- end }}
+  {{- if $caption }}
+    <figcaption>{{ $caption }}</figcaption>
+  {{- end }}
+</figure>
