@@ -1,0 +1,19 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end 
+}}</title>
+
+{{- $desc := "" -}}
+{{- if .IsPage -}}                       <!-- only Page objects have .Params -->
+  {{- if .Params.description -}}
+    {{- $desc = .Params.description -}}
+  {{- else -}}
+    {{- $desc = .Summary -}}
+  {{- end -}}
+{{- else -}}                             <!-- for list pages / home -->
+  {{- if .Site.Params.description -}}
+    {{- $desc = .Site.Params.description -}}
+  {{- end -}}
+{{- end -}}
+
+<meta name="description" content="{{ $desc | plainify | htmlEscape }}">
